@@ -3,9 +3,8 @@
     padding:0;
     margin:0;
 }
-nav {
-    float: right;
-    display: flex;
+header {
+    text-align: center;
 }
 li{
     display: inline-flex;
@@ -16,4 +15,9 @@ li{
 a {
     text-decoration: none;
     color:black;    
+}
+.me {
+    width: 75%;
+    height:auto;
+    align-self:center;
 }
