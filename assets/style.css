@@ -1,14 +1,22 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
     padding:0;
-    margin:0;
 }
 header {
-    text-align: center;
+    position:fixed; 
+    width:100%;
+    background-color:crimson;
+    text-align: center;  
+    z-index: 99;    
+}
+.container{
+    position: relative;
+    bottom:-114px;
 }
 footer{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font: size 1.5em;
+    text-align: center;
 }
 .nav-bar{
     display:flex;
@@ -23,11 +31,17 @@ footer{
 .project-portfolio ul{
     display: flex;
     justify-content:  space-around;
-}
-.project-portfolio li {
     flex-flow: wrap;
     
 }
+.project-portfolio li {
+     flex-basis:0;
+     
+}
+.project-portfolio li :hover {
+    flex-grow: 2;
+}
+
 a {
     text-decoration: none;
     color:black;    
@@ -35,7 +49,8 @@ a {
 .me {
     width: 75%;
     display:block;
-    margin: auto;
+    margin:auto;
+    outline:none;
 }
 .flexbox-main {
     display: flex;

@@ -9,75 +9,78 @@
 </head>
 <body>
     <!-- consider setting nav outside of header and aligning left. -->
-    <header>
-        <h1>Josh Eflin</h1>
-
-        <nav>
-            <ul class="nav-bar">
-                <!-- set nav bar so that it is on the left
-                Set <li> elements nested within to have a hover
-                    Consider using a list of <img> to match the style of the handwriting -->
-                <li>
-                    <a href="#about-me">About Me</a>
-                </li>
-                <li>
-                    <a href="#contact-info">Contact Info</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-            </ul>
-                
-        </nav>
-
-    </header>
-
-    <img class= "me" src="./assets/images/Drawing-by-megan.png"></img>
-
-        <main class="flexbox-main_portfolio">
-            <article id="about-me">
-               About me section coming soon <!-- My name is Josh Eflin.  -->
-            </article>
-            <section id="contact-info">
-                    <ul>
-                        <li></li><!-- email link: When clicked it will prompt   -->
-                        <li></li><!-- phone number -->
-                        <li></li><!-- github -->
+        <header>
+            
+                <nav>
+                    <ul class="nav-bar">
+                        <!-- set nav bar so that it is on the left
+                        Set <li> elements nested within to have a hover
+                            Consider using a list of <img> to match the style of the handwriting -->
+                        <li>
+                           <a href="#about-me">About Me</a>
+                        </li>
+                        <li>
+                            <a href="#contact-info">Contact Info</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
                     </ul>
-            </section>
-            <section class= "project-portfolio" id="portfolio">
-                <!-- portfolio here should be a List of images that appear in a grid, 
-                    I want to assign a hover assignment. the first image  should be displayed largest 
-                    unless another image is being hovered over. 
-                    I want to have the images link to the deployed web app.
-                    The web app will open in a separate window 
-                    (**or maybe it will modify the <img> element and replace it with the functioning web app** 
-                    **Consider setting the <li> in <nav> to toggle this function with a checked**)  -->
-                <ul>
-                    <li>
-                        <a href="https://josheflin.github.io/accesibility-refactor-horiseon/">
-
-                        <img  alt="first project"/>
-                    </a>
-                    </li>
-                    <li>
-                        <img href="" alt="second project"/>
-                        <!-- when clicked a chat bubble pops out of my face and tells you 
-                            this page is the second project -->
-                    </li>
-                    <li>
-                        <img href="" alt="third project"/>
-                        <!-- when clicked, User is redirected to a whoops! page -->
-                    </li>
-                </ul>
-            </section>
-             
-        </main>
-
-
-    <footer>
-        <h2>Thank you for visiting my portfolio page!</h2>
-    </footer>
+                </nav>
+        </header>
+          
+    <div class="container">
+        <img class= "me" src="./assets/images/Drawing-by-megan.png"></img>
     
+
+            <main class="flexbox-main_portfolio">
+                <article id="about-me">
+                   About me section coming soon
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit turpis cursus in hac habitasse platea. Dictumst quisque sagittis purus sit amet volutpat. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Amet consectetur adipiscing elit ut aliquam purus sit amet luctus. Placerat in egestas erat imperdiet sed euismod nisi porta. Donec ac odio tempor orci dapibus. Quam quisque id diam vel quam elementum pulvinar. Quis lectus nulla at volutpat diam ut. Aenean et tortor at risus. Adipiscing elit duis tristique sollicitudin nibh sit amet. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Ultricies integer quis auctor elit. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Id neque aliquam vestibulum morbi blandit. Enim praesent elementum facilisis leo vel. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. <!-- My name is Josh Eflin.  -->
+                </article>
+                <section id="contact-info">
+                        <ul>
+                            <li></li><!-- email link: When clicked it will prompt   -->
+                            <li></li><!-- phone number -->
+                            <li></li><!-- github -->
+                        </ul>
+                </section>
+                <section class= "project-portfolio" id="portfolio">
+                    <!-- portfolio here should be a List of images that appear in a grid, 
+                        I want to assign a hover assignment. the first image  should be displayed largest 
+                        unless another image is being hovered over. 
+                        I want to have the images link to the deployed web app.
+                        The web app will open in a separate window 
+                        (**or maybe it will modify the <img> element and replace it with the functioning web app** 
+                        **Consider setting the <li> in <nav> to toggle this function with a checked**)  -->
+                    <ul>
+                        <li>
+                            <a href="https://josheflin.github.io/accesibility-refactor-horiseon/">
+
+                                <img  src="assets/images/01-html-css-git-homework-demo.png" title= "refactoring" alt="first project"/>
+                            </a>
+                        </li>
+                        <li>
+                            <img href="" title= "cogito-sum-ego" alt="second project"/>
+                            <!-- when clicked a chat bubble pops out of my face and tells you 
+                                this page is the second project -->
+                        </li>
+                        <li>
+                            <img title="Javascript" href="" alt="third project"/>
+                            <!-- when clicked, User is redirected to a whoops! page -->
+                        </li>
+                        <li>
+                            <img title="REACT" href="" alt="Some Project"/>
+                        </li>
+                    </ul>
+                </section>
+
+            </main>
+
+
+        <footer>
+            <h2>Thank you for visiting my portfolio page!</h2>
+        </footer>
+    </div>
 </body>
 </html>
