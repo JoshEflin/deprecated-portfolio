@@ -6,10 +6,14 @@
 header {
     text-align: center;
 }
+ul {
+    display:flex;
+    justify-content: space-evenly;
+}
 li{
-    display: inline-flex;
-    justify-content:center;
-    margin-right: 40px;
+    display: inline;
+    
+    margin: 20px;
     
 }
 a {
@@ -18,6 +22,17 @@ a {
 }
 .me {
     width: 75%;
-    height:auto;
-    align-self:center;
+    display:block;
+    margin: auto;
+}
+.flexbox-main {
+    display: flex;
+    flex-direction: row;
+
+}
+.flexbox-main_leftbar {
+    flex: 0 0 25%;
+}
+.flexbox-main_portfolio {
+    flex:0 0 75%
 }
