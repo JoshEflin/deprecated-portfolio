@@ -6,6 +6,10 @@
 header {
     text-align: center;
 }
+footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font: size 1.5em;
+}
 .nav-bar{
     display:flex;
     justify-content: space-evenly;
@@ -14,6 +18,14 @@ header {
     display: inline;
     font-size:2em;
     margin: 20px;
+    
+}
+.project-portfolio ul{
+    display: flex;
+    justify-content:  space-around;
+}
+.project-portfolio li {
+    flex-flow: wrap;
     
 }
 a {
