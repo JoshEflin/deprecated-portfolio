@@ -38,10 +38,6 @@ footer{
      flex-basis:0;
      
 }
-.project-portfolio li :hover {
-    flex-grow: 2;
-}
-
 a {
     text-decoration: none;
     color:black;    
@@ -52,18 +48,14 @@ a {
     margin:auto;
     outline:none;
 }
-.flexbox-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-.flexbox-main_leftbar {
-    flex: 0 0 25%;
-    border-left: 1em solid blue;
-    
-}
 .flexbox-main_portfolio {
     flex:0 0 75%;
     text-align: center;
+}
+.refactor{
+    width:100px;
+    height: 100px;
+}
+.refactor:hover {
+    flex-grow: 2;
 }
