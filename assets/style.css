@@ -1,19 +1,30 @@
 *{
     box-sizing: border-box; 
     padding:0;
-    margin: 0;
-
+    margin:0;
+}
+body {
+    background-color: beige;
 }
 header {
-    position:fixed; 
+    position:fixed;
+    height: 80px; 
     width:100%;
     background-color:rgb(141, 28, 28);
     text-align: center;  
-    z-index: 99;    
+    z-index: 1;    
+    border-radius: 50%;
 }
+/* set the target scroll point so that nav bar doesnt cover corresponding sections */
+:target {
+    padding-top: 80px;
+    margin-top: 80px;
 .container{
     position: relative;
     bottom:-114px;
+    
+}
+
 }
 /* footer needs to display at bottom of page */
 footer{
@@ -21,14 +32,37 @@ footer{
     font: size 1.5em;
     text-align: center;
 }
-.nav-bar{
+.nav-bar {
+    
     display:flex;
+    justify-content: center;
     justify-content: space-evenly;
 }
 .nav-bar li{
-    display: inline;
-    font-size:2em;
+    flex-wrap: wrap;
+    font-size:1.1em;
     margin: 20px; 
+}
+.nav-bar li :hover {
+    font-weight:bolder;
+    background-color: blue;
+    color:brown;
+    cursor:grab;
+}
+.nav-bar li :active {
+    cursor:grabbing;
+    
+}
+.nav-bar_button {
+    
+    background-color: rgb(42, 165, 118);
+    border-radius: 5px; 
+    border: double pink;
+    text-align: center;
+    font-size:1.1em;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 ul {
@@ -66,7 +100,6 @@ a {
     outline:none;
 }
 .flexbox-main_portfolio {
-    flex:0 0 75%;
     align-items: center;
     display: flex;
     flex-flow: column;
