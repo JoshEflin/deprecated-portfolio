@@ -36,20 +36,20 @@ ul {
 }
 .project-portfolio ul{
     display: flex;
-    justify-content: center ;
+    justify-content:center;
     flex-flow: wrap;
     
 }
 .project-portfolio li {
     padding: 10px;
-    width: 250px;
+    flex: 0 0 33%;
     text-align: center;
     border-style: solid;
     border-width: 1px;    
 }
 
 #feature {
-    flex-grow: 6;
+    flex-basis: 75%;
     flex-shrink: 1;
 }
 a {
