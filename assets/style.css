@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box; 
     padding:0;
+    margin: 0;
+
 }
 header {
     position:fixed; 
     width:100%;
-    background-color:crimson;
+    background-color:rgb(141, 28, 28);
     text-align: center;  
     z-index: 99;    
 }
@@ -13,6 +15,7 @@ header {
     position: relative;
     bottom:-114px;
 }
+/* footer needs to display at bottom of page */
 footer{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font: size 1.5em;
@@ -25,18 +28,29 @@ footer{
 .nav-bar li{
     display: inline;
     font-size:2em;
-    margin: 20px;
-    
+    margin: 20px; 
+}
+
+ul {
+    list-style-type: none;
 }
 .project-portfolio ul{
     display: flex;
-    justify-content:  space-around;
+    justify-content: center ;
     flex-flow: wrap;
     
 }
 .project-portfolio li {
-     flex-basis:0;
-     
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;    
+}
+
+#feature {
+    flex-grow: 6;
+    flex-shrink: 1;
 }
 a {
     text-decoration: none;
@@ -50,12 +64,19 @@ a {
 }
 .flexbox-main_portfolio {
     flex:0 0 75%;
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
 }
-.refactor{
-    width:100px;
-    height: 100px;
+#about-me {
+    width:75%;
+    align-items: center;
+    justify-content: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  
 }
-.refactor:hover {
-    flex-grow: 2;
+
+footer {
+    
 }
+/* make a card class for projects, size them, make them flex wrap. 
+set media query for mobile users so that they stack in a column */
