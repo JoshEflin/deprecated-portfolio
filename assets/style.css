@@ -4,32 +4,31 @@
     margin:0;
 }
 body {
-    background-color: beige;
+    background-color: rgba(5, 5, 5, 0.863);
 }
 header {
     position:fixed;
     height: 80px; 
-    width: 100%;
-    background-color:rgb(141, 28, 28);
+    width: 75%;
+    margin-left:12.5%;
+    background-color:rgb(15, 12, 12);
     text-align: center;  
     z-index: 1;    
-    border-radius: 50%;
+    border-radius: 15px;
 }
 .nav-bar {
-    
-    display:flex;
-    justify-content: center;
+     display:flex;
     justify-content: space-evenly;
 }
 .nav-bar li{
     flex-wrap: wrap;
-    font-size:1.1em;
+    font-size:.8rem;
     margin: 20px; 
 }
 .nav-bar li :hover {
     font-weight:bolder;
-    background-color: blue;
-    color:brown;
+    background-color: rgb(47, 163, 142);
+    color:#954099;
     cursor:grab;
 }
 .nav-bar li :active {
@@ -37,8 +36,7 @@ header {
     
 }
 .nav-bar_button {
-    
-    background-color: rgb(42, 165, 118);
+    background-color: rgb(47, 165, 142);
     border-radius: 5px; 
     border: double pink;
     text-align: center;
@@ -53,7 +51,7 @@ header {
 }
 .container{
     position: relative;
-    bottom:-114px;
+    bottom:-5rem;
 
 }
 /* footer needs to display at bottom of page */
@@ -80,7 +78,7 @@ ul {
     border-width: 1px;    
 }
 .project-portfolio img {
-    height:300px;
+    width: 100%;
 }
 
 #feature {
@@ -97,6 +95,7 @@ a {
     display:block;
     margin:auto;
     outline:none;
+    border-radius: 15px;
 }
 .flexbox-main_portfolio {
     align-items: center;
@@ -115,3 +114,8 @@ footer {
 }
 /* make a card class for projects, size them, make them flex wrap. 
 set media query for mobile users so that they stack in a column */
+@media screen and (min-width:768px) {
+    .nav-bar_button{
+        font-size: 1.1rem;
+    }
+}
