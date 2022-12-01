@@ -1,3 +1,8 @@
+:root{
+    --text: #954099;
+    --background:rgb(47, 163, 142);
+    --color3: #00CFC1;
+}
 *{
     box-sizing: border-box; 
     padding:0;
@@ -5,6 +10,7 @@
 }
 body {
     background-color: rgba(5, 5, 5, 0.863);
+    color:var(--color3);
 }
 header {
     position:fixed;
@@ -26,9 +32,9 @@ header {
     margin: 20px; 
 }
 .nav-bar li :hover {
-    font-weight:bolder;
-    background-color: rgb(47, 163, 142);
-    color:#954099;
+    /* font-weight:bolder; */
+    background-color: var(--background);
+    color:var(--text);
     cursor:grab;
 }
 .nav-bar li :active {
@@ -36,13 +42,14 @@ header {
     
 }
 .nav-bar_button {
-    background-color: rgb(47, 165, 142);
+    background-color: var(--background);
+    color: var(--text);
     border-radius: 5px; 
     border: double pink;
     text-align: center;
     font-size:1.1em;
     font-weight: 400;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* set the target scroll point so that nav bar doesnt cover corresponding sections */
 :target {
@@ -56,8 +63,8 @@ header {
 }
 /* footer needs to display at bottom of page */
 footer{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font: size 1.5em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -88,7 +95,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color:black;    
+    color:var(--text);    
 }
 .me {
     width: 75%;
@@ -106,7 +113,7 @@ a {
     width:75%;
     align-items: center;
     justify-content: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif  
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
 }
 
 footer {
@@ -114,8 +121,22 @@ footer {
 }
 /* make a card class for projects, size them, make them flex wrap. 
 set media query for mobile users so that they stack in a column */
+@media screen and (min-width:320px){
+
+
+}
+
+
+
+
+
 @media screen and (min-width:768px) {
     .nav-bar_button{
         font-size: 1.1rem;
     }
 }
+
+@media screen and (min-width:1024px){
+    
+
+    }
