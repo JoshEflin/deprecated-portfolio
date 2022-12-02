@@ -2,7 +2,9 @@
     --text: #000000;
     --button: rgb(225, 186, 220);
     --color3: #052691;
-}
+    --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --border: 5px;
+}   
 
 * {
     box-sizing: border-box;
@@ -21,7 +23,6 @@ body {
     display: flex;
     flex-direction: row;
     height: 10%;
-
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
@@ -35,13 +36,11 @@ body {
     flex-wrap: wrap;
     font-size: .8rem;
     margin: 20px;
-    
     color: var(--color3);
 }
 
 .nav-bar li :hover {
-    /* font-weight:bolder; */
-    background-color: rgb(220, 176, 210);
+    background-color: rgb(223, 164, 200);
     color: var(--color3);
     cursor: grab;
 }
@@ -54,12 +53,12 @@ body {
 .nav-bar_button {
     background-color: var(--button);
     color: var(--color3);
-    border-radius: 5px;
-    border: double pink;
+    border-radius: var(--border);
+    border: double rgb(220, 176, 210);
     text-align: center;
     font-size: 1.1em;
     font-weight: 400;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:var(--font);
 }
 
 .container {
@@ -69,16 +68,18 @@ body {
 .project-portfolio button {
     background-color: var(--button);
     color: var(--color3);
-    border-radius: 5px;
+    border-radius: var(--border);
     display: block;
     margin: auto;
     font-size: .7rem;
     padding :3px;
-
 }
-/* footer needs to display at bottom of page */
+/* add hover to button  so user knows button is a link */
+.project-portfolio button :hover{
+    background-color: rgb(223, 164, 200)
+}
 footer {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:var(--font);
     font-size: 1.5em;
     text-align: center;
 }
@@ -99,7 +100,7 @@ ul {
     border-style: solid;
     border-width: 1px;
     background-color: rgb(13, 114, 131);
-    border-radius:  5px;
+    border-radius: var(--border);
     margin: 2%;
     
 }
@@ -146,7 +147,7 @@ section {
     width: 75%;
     align-items: center;
     justify-content: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:var(--font);
 }
 
 
