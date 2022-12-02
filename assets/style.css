@@ -9,7 +9,9 @@
     padding: 0;
     margin: 0;
 }
-
+h1{
+   text-align: center; 
+}
 body {
     background-color: rgb(222, 248, 226);
     color: var(--color3);
@@ -62,12 +64,16 @@ body {
 
 .container {
     position: relative;
-    bottom: -5rem;
+    bottom: -6rem;
 }
-button {
+.project-portfolio button {
     background-color: var(--button);
     color: var(--color3);
     border-radius: 5px;
+    display: block;
+    margin: auto;
+    font-size: .7rem;
+    padding :3px;
 
 }
 /* footer needs to display at bottom of page */
@@ -76,7 +82,6 @@ footer {
     font-size: 1.5em;
     text-align: center;
 }
-
 ul {
     list-style-type: none;
 }
@@ -93,6 +98,10 @@ ul {
     text-align: center;
     border-style: solid;
     border-width: 1px;
+    background-color: rgb(13, 114, 131);
+    border-radius:  5px;
+    margin: 2%;
+    
 }
 .project-portfolio li :hover{
     cursor:grab;
@@ -102,12 +111,11 @@ ul {
 }
 
 .project-portfolio img {
-    width: 100%;
+    width: 50%;
 }
 
 #feature {
-    flex-basis: 75%;
-    flex-shrink: 1;
+    flex-basis: 50%;
 }
 
 a {
@@ -141,7 +149,6 @@ section {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-footer {}
 
 /* set media query for mobile users so that they stack in a column */
 @media screen and (max-width:768px) {
@@ -156,6 +163,18 @@ footer {}
     .container {
         margin-left: 20%;
     }
+    .project-portfolio ul {
+        flex-direction: column;
+    }
+    .project-portfolio li {
+        width:65%;
+        margin:auto;
+    }
+    #feature {
+        width: 85%;
+    }
+    
+
 }
 
 @media screen and (min-width:769px) {
@@ -165,7 +184,7 @@ footer {}
 
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
     :target {
-        padding-top: 80px;
-        margin-top: 80px;
+        padding-top: 8%;
+        margin-top: 8%;
     }
 }
