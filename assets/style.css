@@ -1,89 +1,106 @@
-:root{
-    --text: #954099;
-    --background:rgb(47, 163, 142);
-    --color3: #00CFC1;
+:root {
+    --text: #000000;
+    --button: rgb(225, 186, 220);
+    --color3: #052691;
 }
-*{
-    box-sizing: border-box; 
-    padding:0;
-    margin:0;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
 body {
-    background-color: rgba(5, 5, 5, 0.863);
-    color:var(--color3);
+    background-color: rgb(222, 248, 226);
+    color: var(--color3);
 }
-header {
-    position:fixed;
-    height: 80px; 
-    width: 75%;
-    margin-left:12.5%;
-    background-color:rgb(15, 12, 12);
-    text-align: center;  
-    z-index: 1;    
-    border-radius: 15px;
-}
+
 .nav-bar {
-     display:flex;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+
     justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    background-color: rgb(13, 124, 151);
 }
-.nav-bar li{
+
+.nav-bar li {
     flex-wrap: wrap;
-    font-size:.8rem;
-    margin: 20px; 
+    font-size: .8rem;
+    margin: 20px;
+    
+    color: var(--color3);
 }
+
 .nav-bar li :hover {
     /* font-weight:bolder; */
-    background-color: var(--background);
-    color:var(--text);
-    cursor:grab;
+    background-color: rgb(220, 176, 210);
+    color: var(--color3);
+    cursor: grab;
 }
+
 .nav-bar li :active {
-    cursor:grabbing;
-    
+    cursor: grabbing;
+
 }
+
 .nav-bar_button {
-    background-color: var(--background);
-    color: var(--text);
-    border-radius: 5px; 
+    background-color: var(--button);
+    color: var(--color3);
+    border-radius: 5px;
     border: double pink;
     text-align: center;
-    font-size:1.1em;
+    font-size: 1.1em;
     font-weight: 400;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/* set the target scroll point so that nav bar doesnt cover corresponding sections */
-:target {
-    padding-top: 80px;
-    margin-top: 80px;
-}
-.container{
+
+.container {
     position: relative;
-    bottom:-5rem;
+    bottom: -5rem;
+}
+button {
+    background-color: var(--button);
+    color: var(--color3);
+    border-radius: 5px;
 
 }
 /* footer needs to display at bottom of page */
-footer{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     text-align: center;
 }
 
-
 ul {
     list-style-type: none;
 }
-.project-portfolio ul{
+
+.project-portfolio ul {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-flow: wrap;
 }
+
 .project-portfolio li {
     padding: 10px;
     flex: 0 0 33%;
     text-align: center;
     border-style: solid;
-    border-width: 1px;    
+    border-width: 1px;
 }
+.project-portfolio li :hover{
+    cursor:grab;
+}
+.project-portfolio li :active{
+    cursor:grabbing;
+}
+
 .project-portfolio img {
     width: 100%;
 }
@@ -91,52 +108,64 @@ ul {
 #feature {
     flex-basis: 75%;
     flex-shrink: 1;
-
 }
+
 a {
     text-decoration: none;
-    color:var(--text);    
+    color: var(--color3);
 }
+
+section {
+    margin-top: 5%;
+}
+
 .me {
     width: 75%;
-    display:block;
-    margin:auto;
-    outline:none;
+    display: block;
+    margin: auto;
+    outline: none;
     border-radius: 15px;
 }
+
 .flexbox-main_portfolio {
-    align-items: center;
     display: flex;
     flex-flow: column;
+    align-items: center;
+    margin-top: 5%;
 }
+
 #about-me {
-    width:75%;
+    width: 75%;
     align-items: center;
     justify-content: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-footer {
-    
+footer {}
+
+/* set media query for mobile users so that they stack in a column */
+@media screen and (max-width:768px) {
+    .nav-bar {
+        flex-direction: column;
+        height: 100%;
+        width: 20%;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .container {
+        margin-left: 20%;
+    }
 }
-/* make a card class for projects, size them, make them flex wrap. 
-set media query for mobile users so that they stack in a column */
-@media screen and (min-width:320px){
 
-
-}
-
-
-
-
-
-@media screen and (min-width:768px) {
-    .nav-bar_button{
+@media screen and (min-width:769px) {
+    .nav-bar_button {
         font-size: 1.1rem;
     }
-}
 
-@media screen and (min-width:1024px){
-    
-
+    /* set the target scroll point so that nav bar doesnt cover corresponding sections */
+    :target {
+        padding-top: 80px;
+        margin-top: 80px;
     }
+}
