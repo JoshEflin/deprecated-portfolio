@@ -1,4 +1,5 @@
 /* CSS variables  */
+
 :root {
     --text: #000000;
     --darkgreen: rgb(13, 124, 151);
@@ -17,12 +18,13 @@
 body {
     background-color: rgb(222, 248, 226);
     color: var(--color3);
+    
 }
 /* removes disc styling from unordered lists */
 ul {
     list-style-type: none;
 }
-
+/* set nav bar so the <ul> displays as a flex box that is evenly spaced */
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -37,8 +39,6 @@ ul {
 }
 
 .nav-bar li {
-    flex-wrap: wrap;
-    font-size: .8rem;
     margin: 20px;
     color: var(--color3);
 }
@@ -52,7 +52,7 @@ button {
 
 .nav-bar_button {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 400; 
 }
 
@@ -84,7 +84,7 @@ h1{
 .container {
     /* position main container to relative so that I can position other aspects of the page */
     position: relative;
-    bottom: -6rem;
+    bottom: -8rem;
 }
 #about-me {
     align-items: center;
@@ -116,6 +116,7 @@ about me, portfolio, and contact info */
 a {
     text-decoration: none;
     color: var(--color3);
+    display:block;
     
 }
 .project-portfolio li {
@@ -141,7 +142,11 @@ a {
     border-radius: 5px;
     background-color: var(--darkgreen);
 }
-
+/* make it obvious that the image is a link with a box-shadow effect */
+.project-portfolio a :hover{
+   box-shadow:2px 2px 2px 2px var(--darkgreen);
+    
+}
   
 .project-portfolio button {
     display: block;
@@ -149,8 +154,8 @@ a {
     font-size: .7rem;
     padding :3px;
 }
-/* adds hover to button  so user knows button is a link */
-.project-portfolio button +img :hover{
+/*  makes it obvious that the image is a link with a box shadow effect*/
+.project-portfolio button:hover{
     box-shadow: 0px 2px 2px #222;
 }
 
@@ -170,7 +175,8 @@ footer button {
     font-size: 1.1em;
 }
 
-/* set media query for mobile users so that they stack in a column */
+/* set media query for mobile users so that the images  stack in a column and 
+the nav bar is moved to the side for easier thumb access */
 @media screen and (max-width:768px) {
     .nav-bar {
         flex-direction: column;
@@ -198,12 +204,12 @@ footer button {
 
 @media screen and (min-width:769px) {
     .nav-bar_button {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
     }
 
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
      :target {
-        padding-top: 8%;
+        padding-top: 8rem;
         
     } 
 }
