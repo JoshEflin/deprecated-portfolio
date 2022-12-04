@@ -1,15 +1,13 @@
 To do:
+feature gets its own box  outside of the rest of the .project-porfolio flex box
+add one more project for symmetry
+ project portfolio flex boox uses anmimation to resize cards with media queery.
 
-Nav bar down side
+ add hover effect for cards
+ RENAME CLASSES so that they are logical
 
-Each section takes up 100% of screen width and height so that when I scroll to a section I dont see other sections as well
+ eg. card class, card header, card description, card set
+ 
 
-all work projects display on a single screen width/height card, the first project is double the size of the others
-
- reinvert the color scheme back to white background
-
- on cell phones the portfolio section displays 2 cards per row
- except the first project which is takes up a whole flex row
-
- when page is shrunk, use CSS animation to resize cards
+contact info looks awful, put in footer, use git hub img file for link, mail icon for email
 

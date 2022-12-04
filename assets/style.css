@@ -1,3 +1,4 @@
+/* CSS variables  */
 :root {
     --text: #000000;
     --button: rgb(225, 186, 220);
@@ -5,18 +6,20 @@
     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --border: 5px;
 }   
-
+/* soft CSS reset, rather than loading a separate reset.css file */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-h1{
-   text-align: center; 
-}
+
 body {
     background-color: rgb(222, 248, 226);
     color: var(--color3);
+}
+/* removes disc styling from unordered lists */
+ul {
+    list-style-type: none;
 }
 
 .nav-bar {
@@ -38,55 +41,68 @@ body {
     margin: 20px;
     color: var(--color3);
 }
+button {
+    background-color: var(--button);
+    color: var(--color3);
+    border-radius: var(--border);
+    border: var(--color3);
+    font-family:var(--font);
+}
+.nav-bar_button {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 400; 
+}
 
-.nav-bar li :hover {
+.nav-bar button :hover {
     background-color: rgb(223, 164, 200);
     color: var(--color3);
     cursor: grab;
-}
-
-.nav-bar li :active {
-    cursor: grabbing;
-
-}
-
-.nav-bar_button {
-    background-color: var(--button);
-    color: var(--color3);
     border-radius: var(--border);
-    border: double rgb(220, 176, 210);
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 400;
-    font-family:var(--font);
+}
+/* grab shows its a link, grabbing shows it's being clicked */
+.nav-bar button :active {
+    cursor: grabbing;
 }
 
+h1{
+    text-align: center; 
+}
+
+.me {
+    width: 75%;
+    display: block;
+    margin: auto;
+    outline: none;
+    border-radius: 15px;
+}
 .container {
+    /* position main container to relative so that I can position other aspects of the page */
     position: relative;
     bottom: -6rem;
 }
-.project-portfolio button {
-    background-color: var(--button);
-    color: var(--color3);
-    border-radius: var(--border);
-    display: block;
-    margin: auto;
-    font-size: .7rem;
-    padding :3px;
-}
-/* add hover to button  so user knows button is a link */
-.project-portfolio button :hover{
-    background-color: rgb(223, 164, 200)
-}
-footer {
+#about-me {
+    width: 75%;
+    align-items: center;
+    justify-content: center;
     font-family:var(--font);
-    font-size: 1.5em;
+}
+p {
     text-align: center;
 }
-ul {
-    list-style-type: none;
+
+/* creates a container  for the three main sections of the website: 
+about me, portfolio, and contact info */
+.flexbox-main {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
+.project-portfolio {
+    margin-top: 5%;
+}
 .project-portfolio ul {
     display: flex;
     justify-content: center;
@@ -114,42 +130,35 @@ ul {
 .project-portfolio img {
     width: 50%;
 }
+.project-portfolio button {
+    display: block;
+    margin: auto;
+    font-size: .7rem;
+    padding :3px;
+}
+/* adds hover to button  so user knows button is a link */
+.project-portfolio button :hover{
+    background-color: rgb(223, 164, 200)
+}
 
 #feature {
     flex-basis: 50%;
 }
 
+/* remove underline */
 a {
     text-decoration: none;
     color: var(--color3);
 }
 
-section {
-    margin-top: 5%;
-}
-
-.me {
-    width: 75%;
-    display: block;
-    margin: auto;
-    outline: none;
-    border-radius: 15px;
-}
-
-.flexbox-main_portfolio {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 5%;
-}
-
-#about-me {
-    width: 75%;
-    align-items: center;
-    justify-content: center;
+footer {
     font-family:var(--font);
+    font-size: 1.1em;
+    text-align: center;
 }
-
+footer button {
+    font-size: 1.1em;
+}
 
 /* set media query for mobile users so that they stack in a column */
 @media screen and (max-width:768px) {
