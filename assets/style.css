@@ -52,7 +52,7 @@ button {
 
 .nav-bar_button {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 400; 
 }
 
@@ -181,13 +181,13 @@ the nav bar is moved to the side for easier thumb access */
     .nav-bar {
         flex-direction: column;
         height: 100%;
-        width: 21%;
+        width: 20%;
         justify-content: space-evenly;
         align-items: center;
     }
 
     .container {
-        margin-left: 21%;
+        margin-left: 20%;
     }
     .project-portfolio ul {
         flex-direction: column;
