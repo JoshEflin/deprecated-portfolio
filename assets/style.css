@@ -1,7 +1,7 @@
 /* CSS variables  */
 :root {
     --text: #000000;
-    --button: rgb(225, 186, 220);
+    --darkgreen: rgb(13, 124, 151);
     --color3: #052691;
     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --border: 5px;
@@ -11,6 +11,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 body {
@@ -32,7 +33,7 @@ ul {
     width: 100%;
     margin: auto;
     z-index: 1;
-    background-color: rgb(13, 124, 151);
+    background-color:var(--darkgreen);
 }
 
 .nav-bar li {
@@ -48,6 +49,7 @@ button {
     border: var(--color3);
     font-family:var(--font);
 }
+
 .nav-bar_button {
     text-align: center;
     font-size: 1.1em;
@@ -55,10 +57,11 @@ button {
 }
 
 .nav-bar button :hover {
-    background-color: rgb(223, 164, 200);
+    background-color: rgb(15, 125, 150);
     color: var(--color3);
     cursor: grab;
     border-radius: var(--border);
+    box-shadow:  2px 2px 2px #222a
 }
 /* grab shows its a link, grabbing shows it's being clicked */
 .nav-bar button :active {
@@ -67,22 +70,23 @@ button {
 
 h1{
     text-align: center; 
+    font-size: 2.5em;
 }
 
 .me {
-    width: 75%;
+    width:50%;
     display: block;
     margin: auto;
     outline: none;
     border-radius: 15px;
 }
+
 .container {
     /* position main container to relative so that I can position other aspects of the page */
     position: relative;
     bottom: -6rem;
 }
 #about-me {
-    width: 75%;
     align-items: center;
     justify-content: center;
     font-family:var(--font);
@@ -97,7 +101,8 @@ about me, portfolio, and contact info */
     display: flex;
     flex-flow: column;
     align-items: center;
-    margin-top: 5%;
+    justify-content: flex-start;
+    margin-top: 1%;
 }
 
 .project-portfolio {
@@ -108,28 +113,36 @@ about me, portfolio, and contact info */
     justify-content: center;
     flex-flow: wrap;
 }
-
+a {
+    text-decoration: none;
+    color: var(--color3);
+    
+}
 .project-portfolio li {
     padding: 10px;
     flex: 0 0 33%;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgb(13, 114, 131);
     border-radius: var(--border);
-    margin: 2%;
-    
+    margin: 2%; 
+     
 }
+
 .project-portfolio li :hover{
     cursor:grab;
 }
+
 .project-portfolio li :active{
     cursor:grabbing;
 }
 
 .project-portfolio img {
     width: 50%;
+    padding:5px;
+    border-radius: 5px;
+    background-color: var(--darkgreen);
 }
+
+  
 .project-portfolio button {
     display: block;
     margin: auto;
@@ -137,24 +150,21 @@ about me, portfolio, and contact info */
     padding :3px;
 }
 /* adds hover to button  so user knows button is a link */
-.project-portfolio button :hover{
-    background-color: rgb(223, 164, 200)
+.project-portfolio button +img :hover{
+    box-shadow: 0px 2px 2px #222;
 }
 
 #feature {
-    flex-basis: 50%;
+    flex-basis: 52%;
 }
-
 /* remove underline */
-a {
-    text-decoration: none;
-    color: var(--color3);
-}
+
 
 footer {
     font-family:var(--font);
     font-size: 1.1em;
     text-align: center;
+    
 }
 footer button {
     font-size: 1.1em;
@@ -184,7 +194,6 @@ footer button {
         width: 85%;
     }
     
-
 }
 
 @media screen and (min-width:769px) {
@@ -193,8 +202,8 @@ footer button {
     }
 
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
-    :target {
+     :target {
         padding-top: 8%;
-        margin-top: 8%;
-    }
+        
+    } 
 }
