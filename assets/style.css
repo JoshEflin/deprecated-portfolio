@@ -6,7 +6,8 @@
     --color3: #052691;
     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --border: 5px;
-}   
+}
+
 /* soft CSS reset, rather than loading a separate reset.css file */
 * {
     box-sizing: border-box;
@@ -17,20 +18,26 @@
 body {
     background-color: rgb(222, 248, 226);
     color: var(--color3);
+    font: var(--font)
 }
 
-h1{
+h1 {
     text-align: center; 
     font-size: 2.5em;
+    
 }
+
 h2 {
     text-align: center;
     font-size: 1.2rem;
+    
 }
+
 /* removes disc styling from unordered lists */
 ul {
     list-style-type: none;
 }
+
 /* set nav bar so the <ul> displays as a flex box that is evenly spaced */
 .nav-bar {
     display: flex;
@@ -50,18 +57,22 @@ ul {
     color: var(--color3);
 }
 
+/* I chose to use a button class rather than an HTML button becaue nesting an <a> tag inside of a button
+ ended up forcing  users who are "tab selecting" their way around the website to stop on both the <button> and the <a>
+  This is not only a waste of time for the User but also adds in unnecesary HTML and CSS code*/
 .nav-bar_button {
     text-align: center;
     font-size: 1.1em;
     font-weight: 400; 
 }
-
+/* this hover highlights the clickable element  with a box shadow, and a cursor change */
 .nav-bar_button:hover {
     background-color: rgb(15, 125, 150);
     cursor: grab;
     border-radius: var(--border); 
     box-shadow:  2px 2px 2px #222a
 }
+
 /* grab shows its a link, grabbing shows it's being clicked */
 .nav-bar_button:active {
     cursor: grabbing;
@@ -75,16 +86,19 @@ ul {
     border-radius: 15px;
 }
 
+/* position main container to relative so that I can position other aspects of the page */
 .container {
-    /* position main container to relative so that I can position other aspects of the page */
+    
     position: relative;
     bottom: -8rem;
 }
+
 #about-me {
     align-items: center;
     justify-content: center;
     font-family:var(--font);
 }
+
 p {
     text-align: center;
 }
@@ -102,6 +116,7 @@ about me, portfolio, and contact info */
 .project-portfolio {
     margin-top: 2%;
 }
+
 .project-portfolio ul {
     display: flex;
     justify-content: center;
@@ -112,6 +127,7 @@ a {
     text-decoration: none;
     color: var(--color3);    
 }
+
 .project-portfolio li {
     padding: 10px;
     flex: 0 0 33%;
@@ -136,10 +152,10 @@ a {
     border-radius: var(--border);
     background-color: var(--darkgreen);
 }
+
 /* make it obvious that the image is a link with a box-shadow effect */
 .project-portfolio a :hover{
-   box-shadow:2px 2px 2px 2px var(--darkgreen);
-    
+   box-shadow:2px 2px 2px 2px var(--darkgreen)
 }
 
 .project-portfolio a {
@@ -158,13 +174,12 @@ footer {
     font-size: 1.1em;
     text-align: center;    
 }
+
 footer ul {
     display: flex;
     justify-content: space-around;
 }
-footer button {
-    font-size: 1.1em;
-}
+
 footer img {
     height: 1.5rem;
 }
@@ -183,29 +198,28 @@ the nav bar is moved to the side for easier thumb access */
     .container {
         margin-left: 20%;
     }
+
     .project-portfolio ul {
         flex-direction: column;
     }
+
     .project-portfolio li {
         width:65%;
         margin:auto;
     }
+
     #feature {
         width: 100%;
-    }
-    
+    }  
 }
 
 @media screen and (min-width:769px) {
     .nav-bar_button {
         font-size: 1.8rem;
     }
-    footer button {
-        font-size: 1.5rem;
-    }
+
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
      :target {
-        padding-top: 8rem;
-        
+        padding-top: 8rem;  
     } 
 }
