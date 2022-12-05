@@ -29,8 +29,12 @@ h1 {
 
 h2 {
     text-align: center;
+    font-size: 1.2rem; 
+}
+h3 {
+    text-align: center;
     font-size: 1.2rem;
-    
+
 }
 
 /* removes disc styling from unordered lists */
@@ -66,7 +70,7 @@ ul {
     font-weight: 400; 
 }
 /* this hover highlights the clickable element  with a box shadow, and a cursor change */
-.nav-bar_button:hover {
+.nav-bar_button :hover {
     background-color: rgb(15, 125, 150);
     cursor: grab;
     border-radius: var(--border); 
@@ -74,7 +78,7 @@ ul {
 }
 
 /* grab shows its a link, grabbing shows it's being clicked */
-.nav-bar_button:active {
+.nav-bar_button :active {
     cursor: grabbing;
 }
 
@@ -169,12 +173,6 @@ a {
     flex-basis: 52%;
 }
 
-footer {
-    font-family:var(--font);
-    font-size: 1.1em;
-    text-align: center;    
-}
-
 footer ul {
     display: flex;
     justify-content: space-around;
@@ -219,7 +217,7 @@ the nav bar is moved to the side for easier thumb access */
     }
 
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
-     :target {
+    .container :target  {
         padding-top: 8rem;  
     } 
 }
