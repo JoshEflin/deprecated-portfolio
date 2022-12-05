@@ -12,7 +12,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
 }
 
 body {
@@ -42,29 +41,29 @@ ul {
     margin: 20px;
     color: var(--color3);
 }
+
 button {
     background-color: var(--button);
     color: var(--color3);
     border-radius: var(--border);
-    border: var(--color3);
+    border: none;
     font-family:var(--font);
 }
 
 .nav-bar_button {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 400; 
 }
 
-.nav-bar button :hover {
+.nav-bar_button:hover {
     background-color: rgb(15, 125, 150);
-    color: var(--color3);
     cursor: grab;
-    border-radius: var(--border);
+    border-radius: var(--border); 
     box-shadow:  2px 2px 2px #222a
 }
 /* grab shows its a link, grabbing shows it's being clicked */
-.nav-bar button :active {
+.nav-bar_button:active {
     cursor: grabbing;
 }
 
@@ -113,11 +112,10 @@ about me, portfolio, and contact info */
     justify-content: center;
     flex-flow: wrap;
 }
+
 a {
     text-decoration: none;
-    color: var(--color3);
-    display:block;
-    
+    color: var(--color3);    
 }
 .project-portfolio li {
     padding: 10px;
@@ -128,18 +126,19 @@ a {
      
 }
 
-.project-portfolio li :hover{
+.project-portfolio img :hover{
+    border-radius: var(--border);
     cursor:grab;
 }
 
-.project-portfolio li :active{
+.project-portfolio img :active{
     cursor:grabbing;
 }
 
 .project-portfolio img {
     width: 50%;
     padding:5px;
-    border-radius: 5px;
+    border-radius: var(--border);
     background-color: var(--darkgreen);
 }
 /* make it obvious that the image is a link with a box-shadow effect */
@@ -147,23 +146,17 @@ a {
    box-shadow:2px 2px 2px 2px var(--darkgreen);
     
 }
-  
-.project-portfolio button {
+
+.project-portfolio a {
     display: block;
     margin: auto;
-    font-size: .7rem;
+    font-size: 1.1rem;
     padding :3px;
-}
-/*  makes it obvious that the image is a link with a box shadow effect*/
-.project-portfolio button:hover{
-    box-shadow: 0px 2px 2px #222;
 }
 
 #feature {
     flex-basis: 52%;
 }
-/* remove underline */
-
 
 footer {
     font-family:var(--font);
@@ -203,7 +196,7 @@ the nav bar is moved to the side for easier thumb access */
         margin:auto;
     }
     #feature {
-        width: 85%;
+        width: 100%;
     }
     
 }
@@ -212,7 +205,9 @@ the nav bar is moved to the side for easier thumb access */
     .nav-bar_button {
         font-size: 1.8rem;
     }
-
+    footer button {
+        font-size: 1.5rem;
+    }
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
      :target {
         padding-top: 8rem;
