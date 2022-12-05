@@ -9,6 +9,6 @@ The deployed portfolio pages is at https://josheflin.github.io/Eflin-WebPortfoli
 ## Screenshot
 
 
-![Screenshot from a Mobile Phone](.assets\images\codscreenshot-mobile.jpg)
+![Screenshot from a Mobile Phone](assets/screenshot-mobile.jpg)
 
-![Screenshot from a PC](.assets\images\screenshot-portfolio.png)
+![Screenshot from a PC](assets/screenshot-portfolio.png)
