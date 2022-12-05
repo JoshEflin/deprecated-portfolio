@@ -168,11 +168,17 @@ a {
 footer {
     font-family:var(--font);
     font-size: 1.1em;
-    text-align: center;
-    
+    text-align: center;    
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
 }
 footer button {
     font-size: 1.1em;
+}
+footer img {
+    height: 2rem;
 }
 
 /* set media query for mobile users so that the images  stack in a column and 
