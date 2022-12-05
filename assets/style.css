@@ -218,6 +218,6 @@ the nav bar is moved to the side for easier thumb access */
 
     /* set the target scroll point so that nav bar doesnt cover corresponding sections */
     .container :target  {
-        padding-top: 8rem;  
+        padding-top: 7rem;  
     } 
 }
