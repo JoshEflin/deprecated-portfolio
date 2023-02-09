@@ -5,7 +5,7 @@
     --darkgreen: rgb(13, 124, 151);
     --color3: #052691;
     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --border: 5px;
+    --border: 10px;
 }
 
 /* soft CSS reset, rather than loading a separate reset.css file */
@@ -120,12 +120,24 @@ about me, portfolio, and contact info */
 
 .project-portfolio {
     margin-top: 2%;
+    background: rgb(19,126,154);
+    background: linear-gradient(90deg, rgba(19,126,154,1) 0%,
+    rgba(5,38,145,0.5) 31%, rgba(148,159,219,1) 66%,
+    rgba(13,45,149,0.4962359943977591) 75%, 
+    rgba(13,124,151,0.5046393557422969) 100%);
+    border: var(--border);
 }
-
+#project-header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
 .cardboard {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
+    
+    border-radius: var(--border);
 }
 
 a {
@@ -134,7 +146,7 @@ a {
 }
 
 .card {
-    padding: 10px;
+    padding: 12px;
 
     flex: 0 0 33%;
     text-align: center;
@@ -153,8 +165,10 @@ a {
 }
 
 .card img {
+    aspect-ratio: 1/1;
     max-width: 75%;
-    max-height: 50%;
+    height: 400px;
+    object-fit: cover;
     padding:5px;
     border-radius: var(--border);
     background-color: var(--darkgreen);
@@ -162,7 +176,7 @@ a {
 
 /* make it obvious that the image is a link with a box-shadow effect */
 .card a :hover{
-   box-shadow:2px 2px 2px 2px var(--darkgreen)
+   box-shadow:4px 4px 4px 4px var(--darkgreen)
 }
 
 .card a {
