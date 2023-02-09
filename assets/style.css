@@ -5,7 +5,7 @@
     --darkgreen: rgb(13, 124, 151);
     --color3: #052691;
     --font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    --border: 5px;
+    --border: 10px;
 }
 
 /* soft CSS reset, rather than loading a separate reset.css file */
@@ -16,7 +16,11 @@
 }
 
 body {
-    background-color: rgb(222, 248, 226);
+    background-color: rgb(148, 159, 219);
+    background: linear-gradient(90deg, rgba(19,126,154,1) 0%,
+    rgba(5,38,145,0.5) 31%, rgba(148,159,219,1) 66%,
+    rgba(13,45,149,0.4962359943977591) 75%, 
+    rgba(13,124,151,0.5046393557422969) 100%);
     color: var(--color3);
     font: var(--font)
 }
@@ -72,6 +76,7 @@ ul {
 /* this hover highlights the clickable element  with a box shadow, and a cursor change */
 .nav-bar_button :hover {
     background-color: rgb(15, 125, 150);
+   
     cursor: grab;
     border-radius: var(--border); 
     box-shadow:  2px 2px 2px #222a
@@ -120,12 +125,26 @@ about me, portfolio, and contact info */
 
 .project-portfolio {
     margin-top: 2%;
+    background-color: rgb(148, 159, 219);
+    background: linear-gradient(90deg, rgba(19,126,154,.55) 0%,
+    rgba(5,38,145,0.25) 25%, rgba(148,159,219,1) 50%,
+    rgba(13,45,149,0.25) 75%, 
+    rgba(13,124,151,0.25) 100%);
+    
+    border: var(--border);
+    border-radius: var(--border);
 }
-
-.project-portfolio ul {
+#project-header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.cardboard {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
+    
+    border-radius: var(--border);
 }
 
 a {
@@ -133,8 +152,9 @@ a {
     color: var(--color3);    
 }
 
-.project-portfolio li {
-    padding: 10px;
+.card {
+    padding: 12px;
+
     flex: 0 0 33%;
     text-align: center;
     border-radius: var(--border);
@@ -142,37 +162,37 @@ a {
      
 }
 
-.project-portfolio img :hover{
+.card img :hover{
     border-radius: var(--border);
     cursor:grab;
 }
 
-.project-portfolio img :active{
+.card img :active{
     cursor:grabbing;
 }
 
-.project-portfolio img {
-    width: 50%;
+.card img {
+    aspect-ratio: 1/1;
+    max-width: 75%;
+    height: 400px;
+    object-fit: cover;
     padding:5px;
     border-radius: var(--border);
     background-color: var(--darkgreen);
 }
 
 /* make it obvious that the image is a link with a box-shadow effect */
-.project-portfolio a :hover{
-   box-shadow:2px 2px 2px 2px var(--darkgreen)
+.card a :hover{
+   box-shadow:4px 4px 4px 4px var(--darkgreen)
 }
 
-.project-portfolio a {
+.card a {
     display: block;
     margin: auto;
     font-size: 1.1rem;
     padding :3px;
 }
 
-#feature {
-    flex-basis: 52%;
-}
 
 footer ul {
     display: flex;
