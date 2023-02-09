@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: rgb(222, 248, 226);
+    background-color: rgb(148, 159, 219);
     color: var(--color3);
     font: var(--font)
 }
@@ -122,7 +122,7 @@ about me, portfolio, and contact info */
     margin-top: 2%;
 }
 
-.project-portfolio ul {
+.cardboard {
     display: flex;
     justify-content: center;
     flex-flow: wrap;
@@ -133,8 +133,9 @@ a {
     color: var(--color3);    
 }
 
-.project-portfolio li {
+.card {
     padding: 10px;
+
     flex: 0 0 33%;
     text-align: center;
     border-radius: var(--border);
@@ -142,37 +143,35 @@ a {
      
 }
 
-.project-portfolio img :hover{
+.card img :hover{
     border-radius: var(--border);
     cursor:grab;
 }
 
-.project-portfolio img :active{
+.card img :active{
     cursor:grabbing;
 }
 
-.project-portfolio img {
-    width: 50%;
+.card img {
+    max-width: 75%;
+    max-height: 50%;
     padding:5px;
     border-radius: var(--border);
     background-color: var(--darkgreen);
 }
 
 /* make it obvious that the image is a link with a box-shadow effect */
-.project-portfolio a :hover{
+.card a :hover{
    box-shadow:2px 2px 2px 2px var(--darkgreen)
 }
 
-.project-portfolio a {
+.card a {
     display: block;
     margin: auto;
     font-size: 1.1rem;
     padding :3px;
 }
 
-#feature {
-    flex-basis: 52%;
-}
 
 footer ul {
     display: flex;
