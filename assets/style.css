@@ -17,6 +17,10 @@
 
 body {
     background-color: rgb(148, 159, 219);
+    background: linear-gradient(90deg, rgba(19,126,154,1) 0%,
+    rgba(5,38,145,0.5) 31%, rgba(148,159,219,1) 66%,
+    rgba(13,45,149,0.4962359943977591) 75%, 
+    rgba(13,124,151,0.5046393557422969) 100%);
     color: var(--color3);
     font: var(--font)
 }
@@ -72,6 +76,7 @@ ul {
 /* this hover highlights the clickable element  with a box shadow, and a cursor change */
 .nav-bar_button :hover {
     background-color: rgb(15, 125, 150);
+   
     cursor: grab;
     border-radius: var(--border); 
     box-shadow:  2px 2px 2px #222a
@@ -120,12 +125,14 @@ about me, portfolio, and contact info */
 
 .project-portfolio {
     margin-top: 2%;
-    background: rgb(19,126,154);
-    background: linear-gradient(90deg, rgba(19,126,154,1) 0%,
-    rgba(5,38,145,0.5) 31%, rgba(148,159,219,1) 66%,
-    rgba(13,45,149,0.4962359943977591) 75%, 
-    rgba(13,124,151,0.5046393557422969) 100%);
+    background-color: rgb(148, 159, 219);
+    background: linear-gradient(90deg, rgba(19,126,154,.55) 0%,
+    rgba(5,38,145,0.25) 25%, rgba(148,159,219,1) 50%,
+    rgba(13,45,149,0.25) 75%, 
+    rgba(13,124,151,0.25) 100%);
+    
     border: var(--border);
+    border-radius: var(--border);
 }
 #project-header {
     font-size: 2rem;
